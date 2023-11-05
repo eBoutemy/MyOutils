@@ -46,6 +46,7 @@ Menu principal avec 3 options disponible.
 
 # Pré-build
 ![image](https://github.com/eBoutemy/MyOutils/assets/78074328/9cf2ce0c-1503-49d8-9ce6-644972e1f2f6)
+
 Les pré-build permet d'installer une machine avec les outils pré installer comme mariadb, pure-ftpd ou encore openssh-server
 
 ## Menu SSH
