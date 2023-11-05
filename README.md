@@ -1,5 +1,5 @@
 # MyOutils
-Outils d'installation de divers utilitaires.
+## Outils d'installation de divers utilitaires.
 
 MyOutils est un script qui automatise l'installation et la configuration de plusieurs outils essentiels pour la gestion d'un serveur Linux.
 
@@ -9,5 +9,5 @@ MyOutils est un script qui automatise l'installation et la configuration de plus
 
 3. Il installe et configure Pure-FTPd, un serveur FTP sécurisé, facilitant le transfert de fichiers via FTP.
 
-42 Installe Apache, un serveur Web, ainsi que plusieurs systèmes de gestion de contenu (CMS) populaires pour la création de sites Web.
+4. Installe Apache, un serveur Web, ainsi que plusieurs systèmes de gestion de contenu (CMS) populaires pour la création de sites Web.
 
