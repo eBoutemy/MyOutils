@@ -12,7 +12,8 @@ figlet "Menu principal"
 echo "1) Menu LXC"
 echo "2) Menu SSH"
 echo "3) Menu PURE-FTPD"
-echo "4) Menu CMS"
+echo "4) Menu MariaDB"
+echo "5) Menu CMS"
 echo "0) Quitter"
 echo "Veuillez choisir une option :"
 read choix
@@ -27,6 +28,9 @@ case $choix in
 		bash pure_ftpd/menupureftpd.sh
 		;;
 	4 )
+		bash mariadb/menumariadb.sh
+		;;
+	5 )
 		bash cms/menucms.sh
 		;;
 	0 )

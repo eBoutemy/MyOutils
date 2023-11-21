@@ -19,21 +19,22 @@ while [ $quitter -ne 0 ]; do
             sudo apt update
             sudo apt install -y pure-ftpd
             sudo service pure-ftpd restart
+            groupadd --gid 6262 ftpGroup
+            useradd -u 6262 -g ftpGroup -d /dev/null -s /bin/false ftpUser
+            ln -s /etc/pure-ftpd/conf/PureDB /etc/pure-ftpd/auth/75puredb
+            echo no > /etc/pure-ftpd/conf/PAMAuthentication
+            echo no > /etc/pure-ftpd/conf/UnixAuthentication
+            touch /etc/pure-ftpd/conf/CreateHomeDir
+            echo yes > /etc/pure-ftpd/conf/CreateHomeDir
             echo "Pure-FTPd a été installé."
             ;;
         2 )
             echo "Création d'un nouvel utilisateur FTP"
             echo "Saisissez le nom de l'utilisateur FTP :"
             read ftp_username
-            
-            sudo useradd -d /home/$ftp_username -s /bin/false $ftp_username
-            sudo pure-pw useradd $ftp_username -u $ftp_username -d /home/$ftp_username
-            sudo pure-pw mkdb
-            sudo ln -s /etc/pure-ftpd/conf/PureDB /etc/pure-ftpd/auth/60puredb
-            sudo chown -hR $ftp_username: /home/$ftp_username
+            pure-pw useradd $ftp_username -u ftpUser -d /home/$ftp_username -m
             echo "Utilisateur FTP créé avec accès au répertoire personnel."
             ;;
-
         0 )
             quitter=0
             ;;

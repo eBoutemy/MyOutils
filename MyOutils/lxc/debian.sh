@@ -20,11 +20,10 @@ case $choix in
 		read namemachinedeb10
 		DOWNLOAD_KEYSERVER="keyserver.ubuntu.com" lxc-create -t download -n $namemachinedeb10 -- -d debian -r buster -a amd64
 		systemctl restart lxc-net
+		lxc-stop -n $namemachinedeb10
 		lxc-start -n $namemachinedeb10
 		lxc-attach -n $namemachinedeb10 -- apt-get update
      	lxc-attach -n $namemachinedeb10 -- apt-get install -y nano bash-completion
-		lxc-stop -n $namemachinedeb10
-		lxc-start -n $namemachinedeb10
 		lxc-ls -f
 		;;
 	2 )
