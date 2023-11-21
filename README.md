@@ -30,7 +30,8 @@ Menu principal avec 3 options disponible.
  - 1. Menu LXC.
  - 2. Menu SSH.
  - 3. Menu Pure-FTPd.
- - 4. Menu CMS.
+ - 4. Menu MariaDB.
+ - 5. Menu CMS.
   
 ## Menu LXC
 
